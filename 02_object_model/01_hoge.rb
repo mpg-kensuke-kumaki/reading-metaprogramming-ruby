@@ -5,15 +5,54 @@
 # HogeクラスのスーパークラスはStringである
 # 自身が"hoge"という文字列である時（HogeクラスはStringがスーパークラスなので、当然自身は文字列である）、trueを返すhoge?メソッドが定義されている
 
-class Hoge
+class Hoge < String
+  Hoge = 'hoge'
+
+  def hogehoge
+    'hoge'
+  end
+
+  def hoge?
+    self == 'hoge'
+  end
 end
 
 # Q2.
 # 次に挙げるクラスのいかなるインスタンスからも、hogeメソッドが呼び出せるようにする
 # それらのhogeメソッドは、全て"hoge"という文字列を返す
 # - String
+class String
+  def hoge
+    'hoge'
+  end
+end
 # - Integer
+class Integer
+  def hoge
+    'hoge'
+  end
+end
 # - Numeric
+class Numeric
+  def hoge
+    'hoge'
+  end
+end
 # - Class
+class Class
+  def hoge
+    'hoge'
+  end
+end
 # - Hash
+class Hash
+  def hoge
+    'hoge'
+  end
+end
 # - TrueClass
+class TrueClass
+  def hoge
+    'hoge'
+  end
+end
